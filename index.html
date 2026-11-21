@@ -19,9 +19,9 @@ header.top{display:flex;align-items:center;justify-content:space-between;padding
 .cta{display:flex;flex-wrap:wrap;gap:12px}
 .cta a{text-decoration:none;font-weight:700;border-radius:16px;padding:14px 22px;font-size:17px}
 .cta .line{background:#06C755;color:#fff}.cta .tel{background:var(--yellow);color:var(--navy)}
-.mascot-box{display:flex;justify-content:center;position:relative}
-.mascot{width:min(340px,100%);height:auto;transform-origin:50% 90%;animation:bob 3.2s ease-in-out infinite}
-.bubble{position:absolute;top:6%;left:0;background:#fff;border-radius:18px;padding:10px 16px;font-weight:600;box-shadow:0 6px 18px rgba(15,39,71,.12)}
+.mascot-box{display:flex;justify-content:center;position:relative;padding-top:36px}
+.mascot{height:min(420px,80vw);width:auto;transform-origin:50% 90%;animation:bob 3.2s ease-in-out infinite}
+.bubble{position:absolute;top:2%;right:4%;background:#fff;border-radius:18px;padding:10px 16px;font-weight:600;box-shadow:0 6px 18px rgba(15,39,71,.12)}
 @keyframes bob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-8px) rotate(-1.5deg)}}
 @media (prefers-reduced-motion:reduce){.mascot{animation:none}}
 .agent{margin:22px 0;background:var(--coral);color:#fff;border-radius:20px;padding:16px 22px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;font-weight:600}
@@ -43,7 +43,7 @@ h2{font-size:30px;margin:34px 0 6px}.muted{color:#5A6478;margin:0 0 18px}
 .why div{background:var(--sky);border-radius:20px;padding:18px}.why b{display:block;font-size:18px;margin-bottom:4px}
 footer{margin:40px 0 0;background:var(--navy);color:#fff;padding:30px 0}footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 footer a{color:var(--yellow);text-decoration:none;font-weight:600}
-@media (max-width:760px){.hero{grid-template-columns:1fr;padding:28px 20px 10px;text-align:center}.pills,.cta{justify-content:center}.mascot-box{order:-1}.mascot{width:220px}.bubble{left:auto;right:0}.call{padding:8px 14px}}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding:28px 20px 10px;text-align:center}.pills,.cta{justify-content:center}.mascot-box{order:-1}.mascot{height:300px}.bubble{right:0;top:0}.call{padding:8px 14px}}
 </style></head>
 <body>
 <div class="wrap">
@@ -55,40 +55,7 @@ footer a{color:var(--yellow);text-decoration:none;font-weight:600}
   <div class="pills"><span>ยื่นกู้ให้ฟรี</span><span>มีผ่อนตรงกับเจ้าของ</span><span>หนองปรือ · บางละมุง · พัทยา</span></div>
   <div class="cta"><a class="line" href="https://line.me/ti/p/~turkturk21" target="_blank" rel="noopener">แอด LINE: turkturk21</a><a class="tel" href="tel:0635195664">นัดดูบ้าน</a></div>
  </div>
- <div class="mascot-box"><span class="bubble">สวัสดีครับ เตริกเองครับ 👋</span><svg role="img" aria-label="มาสคอตน้องเตริก ชุดโปโลบ้านคุณเตริก ไว้หนวดเครา โบกมือ" viewBox="0 0 400 460" class="mascot">
-<defs>
-<radialGradient id="gSkin" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#FFE6CC"/><stop offset=".6" stop-color="#F2C9A0"/><stop offset="1" stop-color="#D9A57A"/></radialGradient>
-<radialGradient id="gEar" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#F7D2AE"/><stop offset="1" stop-color="#CF9A70"/></radialGradient>
-<linearGradient id="gHair" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0" stop-color="#4A4A5C"/><stop offset=".45" stop-color="#22222C"/><stop offset="1" stop-color="#121218"/></linearGradient>
-<linearGradient id="gShirt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4C8BFF"/><stop offset=".55" stop-color="#1663F0"/><stop offset="1" stop-color="#0D47B8"/></linearGradient>
-<linearGradient id="gPants" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#555B75"/><stop offset="1" stop-color="#2C3045"/></linearGradient>
-<radialGradient id="gEye" cx="40%" cy="30%" r="70%"><stop offset="0" stop-color="#5A4A3E"/><stop offset=".55" stop-color="#2A1E18"/><stop offset="1" stop-color="#0E0A08"/></radialGradient>
-<radialGradient id="gShoe" cx="40%" cy="30%" r="80%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#D5DDEA"/></radialGradient>
-<filter id="fSoft" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#0F2747" flood-opacity=".22"/></filter>
-<filter id="fIn"><feGaussianBlur stdDeviation="3"/></filter>
-</defs><ellipse cx="200" cy="440" rx="110" ry="14" fill="#0F2747" opacity="0.12"></ellipse><g filter="url(#fSoft)">
-<rect x="166" y="382" width="28" height="42" rx="12" fill="url(#gPants)"></rect><rect x="206" y="382" width="28" height="42" rx="12" fill="url(#gPants)"></rect>
-<ellipse cx="178" cy="428" rx="24" ry="11" fill="url(#gShoe)" stroke="#C9D3E6" stroke-width="3"></ellipse><ellipse cx="222" cy="428" rx="24" ry="11" fill="url(#gShoe)" stroke="#C9D3E6" stroke-width="3"></ellipse>
-<path d="M148 302 Q148 282 170 280 L230 280 Q252 282 252 302 L258 374 Q258 388 244 388 L156 388 Q142 388 142 374 Z" fill="url(#gShirt)"></path>
-<path d="M158 300 Q160 290 172 288 L176 370" fill="none" stroke="#FFFFFF" stroke-width="6" opacity=".18" stroke-linecap="round"></path><path d="M182 280 L200 304 L218 280" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"></path>
-<path d="M210 336 l12 -11 l12 11 v12 h-24 z" fill="#FFD84D" stroke="#0F2747" stroke-width="2.5" stroke-linejoin="round"></path>
-<path d="M148 306 Q122 330 132 358" fill="none" stroke="#1A5FE0" stroke-width="24" stroke-linecap="round"></path><circle cx="133" cy="362" r="14" fill="url(#gSkin)"></circle>
-<path d="M252 306 Q306 292 336 240" fill="none" stroke="#1A5FE0" stroke-width="24" stroke-linecap="round"></path><circle cx="340" cy="232" r="16" fill="url(#gSkin)"></circle>
-<path d="M352 204 q10 -6 14 4 M358 222 q12 -2 12 10" fill="none" stroke="#FFC21A" stroke-width="5" stroke-linecap="round"></path>
-
-<circle cx="80" cy="196" r="22" fill="url(#gEar)"></circle><circle cx="320" cy="196" r="22" fill="url(#gEar)"></circle>
-<circle cx="200" cy="186" r="122" fill="url(#gSkin)"></circle>
-<path d="M138 168 Q152 158 168 166" fill="none" stroke="#1F1F27" stroke-width="8" stroke-linecap="round"></path><path d="M232 166 Q248 158 262 168" fill="none" stroke="#1F1F27" stroke-width="8" stroke-linecap="round"></path>
-<ellipse cx="154" cy="200" rx="17" ry="22" fill="url(#gEye)"></ellipse><ellipse cx="246" cy="200" rx="17" ry="22" fill="url(#gEye)"></ellipse>
-<circle cx="160" cy="191" r="6.5" fill="#FFFFFF"></circle><circle cx="252" cy="191" r="6.5" fill="#FFFFFF"></circle>
-<circle cx="149" cy="209" r="3" fill="#FFFFFF"></circle><circle cx="241" cy="209" r="3" fill="#FFFFFF"></circle>
-<ellipse cx="120" cy="236" rx="18" ry="9" fill="#F08A8A" opacity="0.45"></ellipse><ellipse cx="280" cy="236" rx="18" ry="9" fill="#F08A8A" opacity="0.45"></ellipse>
-<path d="M92 214 Q96 296 200 308 Q304 296 308 214 Q300 262 262 270 Q236 278 200 280 Q164 278 138 270 Q100 262 92 214 Z" fill="#1F1F27" opacity="0.88"></path>
-<path d="M170 236 Q200 222 230 236 Q214 242 200 238 Q186 242 170 236 Z" fill="#1F1F27"></path><ellipse cx="150" cy="122" rx="46" ry="22" fill="#FFFFFF" opacity=".22" filter="url(#fIn)"></ellipse>
-<ellipse cx="200" cy="226" rx="9" ry="6" fill="#D49A70" opacity=".55"></ellipse>
-<ellipse cx="196" cy="223" rx="3" ry="2" fill="#FFFFFF" opacity=".6"></ellipse><path d="M180 248 Q200 266 220 248" fill="#E2574C" stroke="#6B2622" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M84 176 Q72 100 128 72 Q150 30 214 32 Q262 26 292 62 Q330 92 318 176 Q308 140 290 126 Q296 108 280 98 Q262 116 232 112 Q240 94 226 88 Q206 110 172 108 Q178 92 164 88 Q138 112 118 120 Q96 134 92 180 Z" fill="url(#gHair)"></path>
-<path d="M150 70 Q190 40 236 52 Q206 56 186 74 Z" fill="#6A6A80" opacity=".7"></path>
-</g></svg></div>
+ <div class="mascot-box"><span class="bubble">สวัสดีครับ เตริกเองครับ 👋</span><img class="mascot" src="turk.webp" alt="น้องเตริก มาสคอตบ้านคุณเตริก โบกมือทักทาย" width="345" height="720"></div>
 </section>
 <div class="agent"><span><b>🤝 รับเอเจนท์ช่วยขาย</b> จ่ายค่าคอม 3% เต็มทุกหลัง</span><span>ดึงรูป-ข้อมูลไปโพสต์ได้เลย</span></div>
 <h2>บ้านที่เปิดขายตอนนี้</h2><p class="muted">ราคาและสถานะอัปเดตล่าสุด 20 พ.ย. 2569</p>
