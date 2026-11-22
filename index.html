@@ -21,7 +21,7 @@ header.top{display:flex;align-items:center;justify-content:space-between;padding
 .cta .line{background:#06C755;color:#fff}.cta .tel{background:var(--yellow);color:var(--navy)}
 .mascot-box{display:flex;justify-content:center;position:relative;padding-top:36px}
 .mascot{height:min(420px,80vw);width:auto;transform-origin:50% 90%;animation:bob 3.2s ease-in-out infinite}
-.bubble{position:absolute;top:2%;right:4%;background:#fff;border-radius:18px;padding:10px 16px;font-weight:600;box-shadow:0 6px 18px rgba(15,39,71,.12)}
+.bubble{position:absolute;z-index:2;top:-6px;right:2%;background:#fff;border-radius:18px;padding:10px 16px;font-weight:600;box-shadow:0 6px 18px rgba(15,39,71,.12)}
 @keyframes bob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-8px) rotate(-1.5deg)}}
 @media (prefers-reduced-motion:reduce){.mascot{animation:none}}
 .agent{margin:22px 0;background:var(--coral);color:#fff;border-radius:20px;padding:16px 22px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;font-weight:600}
@@ -44,6 +44,16 @@ h2{font-size:30px;margin:34px 0 6px}.muted{color:#5A6478;margin:0 0 18px}
 footer{margin:40px 0 0;background:var(--navy);color:#fff;padding:30px 0}footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 footer a{color:var(--yellow);text-decoration:none;font-weight:600}
 @media (max-width:760px){.hero{grid-template-columns:1fr;padding:28px 20px 10px;text-align:center}.pills,.cta{justify-content:center}.mascot-box{order:-1}.mascot{height:300px}.bubble{right:0;top:0}.call{padding:8px 14px}}
+.stk{display:block;height:auto}
+.agent{position:relative;padding-left:118px}.agent .stk{position:absolute;left:8px;bottom:-4px;width:104px}
+.h2row{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}.h2row .stk{width:130px;margin-bottom:12px}
+.whyrow{display:grid;grid-template-columns:150px 1fr;align-items:center;gap:16px}.whyrow .stk{width:150px}
+.buddy{position:fixed;right:12px;bottom:12px;z-index:50;width:104px;height:92px;border-radius:22px;background:#fff;box-shadow:0 8px 24px rgba(15,39,71,.22);display:flex;align-items:center;justify-content:center;text-decoration:none}
+.buddy img{position:absolute;width:96px;opacity:0;transform:scale(.6);transition:opacity .3s,transform .35s cubic-bezier(.3,1.6,.5,1)}.buddy img.on{opacity:1;transform:scale(1)}
+.buddy::after{content:"LINE";position:absolute;top:-8px;left:-8px;background:#06C755;color:#fff;font-weight:700;font-size:12px;border-radius:999px;padding:2px 8px}
+@media (max-width:760px){.agent{padding-left:96px}.agent .stk{width:84px}.h2row .stk{width:92px}.h2row h2{font-size:26px}.whyrow{grid-template-columns:1fr}.whyrow .stk{width:120px;margin:0 auto}.buddy{width:88px;height:78px}.buddy img{width:80px}}
+@media (prefers-reduced-motion:reduce){.buddy img{transition:none}}
+footer{padding-bottom:110px}
 </style></head>
 <body>
 <div class="wrap">
@@ -55,10 +65,10 @@ footer a{color:var(--yellow);text-decoration:none;font-weight:600}
   <div class="pills"><span>ยื่นกู้ให้ฟรี</span><span>มีผ่อนตรงกับเจ้าของ</span><span>หนองปรือ · บางละมุง · พัทยา</span></div>
   <div class="cta"><a class="line" href="https://line.me/ti/p/~turkturk21" target="_blank" rel="noopener">แอด LINE: turkturk21</a><a class="tel" href="tel:0635195664">นัดดูบ้าน</a></div>
  </div>
- <div class="mascot-box"><span class="bubble">สวัสดีครับ เตริกเองครับ 👋</span><img class="mascot" src="turk.webp" alt="น้องเตริก มาสคอตบ้านคุณเตริก โบกมือทักทาย" width="345" height="720"></div>
+ <div class="mascot-box"><span class="bubble">สวัสดีครับ เตริกเองครับ 👋</span><img class="mascot" src="turk.webp" alt="น้องเตริก มาสคอตบ้านคุณเตริก โบกมือทักทาย" width="313" height="720"></div>
 </section>
-<div class="agent"><span><b>🤝 รับเอเจนท์ช่วยขาย</b> จ่ายค่าคอม 3% เต็มทุกหลัง</span><span>ดึงรูป-ข้อมูลไปโพสต์ได้เลย</span></div>
-<h2>บ้านที่เปิดขายตอนนี้</h2><p class="muted">ราคาและสถานะอัปเดตล่าสุด 20 พ.ย. 2569</p>
+<div class="agent"><img class="stk" src="stk15.webp" alt="น้องเตริก ยกนิ้ว สุดยอด"><span><b>🤝 รับเอเจนท์ช่วยขาย</b> จ่ายค่าคอม 3% เต็มทุกหลัง</span><span>ดึงรูป-ข้อมูลไปโพสต์ได้เลย</span></div>
+<div class="h2row"><div><h2>บ้านที่เปิดขายตอนนี้</h2><p class="muted">ราคาและสถานะอัปเดตล่าสุด 20 พ.ย. 2569</p></div><img class="stk" src="stk06.webp" alt="น้องเตริก ถือกุญแจบ้าน"></div>
 <div class="grid">
 <article class="card"><div class="pic"><img src="dome.jpg" alt="ทาวน์โฮม เนินพลับหวานวิลเลจ (หลังโดม)"><span class="tag">ผ่อนตรง</span><span class="st">พร้อมอยู่</span></div><div class="body"><h3>ทาวน์โฮม เนินพลับหวานวิลเลจ (หลังโดม)</h3><p class="spec">17 ตร.ว. · 2 นอน 2 น้ำ</p><p class="price">฿3,290,000</p><p class="sub">ดาวน์ 350,000 · ผ่อน 25,000/เดือน</p><div class="acts"><a class="b1" href="https://line.me/ti/p/~turkturk21" target="_blank" rel="noopener">ถามหลังนี้ทาง LINE</a></div></div></article>
 <article class="card"><div class="pic"><div class="ph"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 30 L32 9 L56 30 M14 25 V55 H50 V25 M27 55 V40 H37 V55" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/></svg></div><span class="tag">จองแล้ว 3/7</span><span class="st">กำลังรีโนเวท</span></div><div class="body"><h3>รัตนากร 10 · The New Collection</h3><p class="spec">19 ตร.ว. · 3 นอน 3 น้ำ</p><p class="price">฿2,850,000</p><p class="sub">หลังริม 2,950,000 · แถมเฟอร์</p><div class="acts"><a class="b1" href="https://line.me/ti/p/~turkturk21" target="_blank" rel="noopener">ถามหลังนี้ทาง LINE</a><a class="b2" href="https://bankunturk.github.io/-Rk10TheNewCollectionbyTurk/present.html" target="_blank" rel="noopener">ดูแบบ 3D</a></div></div></article>
@@ -70,7 +80,9 @@ footer a{color:var(--yellow);text-decoration:none;font-weight:600}
 <article class="card"><div class="pic"><div class="ph"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 30 L32 9 L56 30 M14 25 V55 H50 V25 M27 55 V40 H37 V55" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/></svg></div><span class="st">เร็วๆ นี้</span></div><div class="body"><h3>วนาลี หลังกลาง</h3><p class="spec">21 ตร.ว. · 2 นอน 2 น้ำ</p><p class="price">฿2,390,000</p><p class="sub">พร้อมเฟอร์</p><div class="acts"><a class="b1" href="https://line.me/ti/p/~turkturk21" target="_blank" rel="noopener">ถามหลังนี้ทาง LINE</a></div></div></article>
 </div>
 <h2>ทำไมต้องบ้านคุณเตริก</h2>
-<div class="why"><div><b>รีโนเวทใหม่ทั้งหลัง</b>ทำเองทุกหลัง คุมงานเอง หิ้วกระเป๋าเข้าอยู่ได้</div><div><b>ผ่อนตรงได้</b>บางหลังผ่อนกับเจ้าของได้ ไม่ต้องลุ้นแบงก์</div><div><b>ช่วยยื่นกู้ฟรี</b>เตรียมเอกสารให้ครบ จนโอนจบ</div></div>
+<div class="whyrow"><img class="stk" src="stk14.webp" alt="น้องเตริก เดี๋ยวจัดให้"><div class="why"><div><b>รีโนเวทใหม่ทั้งหลัง</b>ทำเองทุกหลัง คุมงานเอง หิ้วกระเป๋าเข้าอยู่ได้</div><div><b>ผ่อนตรงได้</b>บางหลังผ่อนกับเจ้าของได้ ไม่ต้องลุ้นแบงก์</div><div><b>ช่วยยื่นกู้ฟรี</b>เตรียมเอกสารให้ครบ จนโอนจบ</div></div></div>
 </div>
 <footer><div class="wrap"><span><b>บ้านคุณเตริก</b> · พัทยา ชลบุรี</span><span>คุณเตริก <a href="tel:0635195664">063-519-5664</a> · คุณโม <a href="tel:0641599564">064-159-9564</a> · LINE <a href="https://line.me/ti/p/~turkturk21" target="_blank" rel="noopener">turkturk21</a></span></div></footer>
+<a class="buddy" href="https://line.me/ti/p/~turkturk21" target="_blank" rel="noopener" aria-label="แชท LINE กับคุณเตริก"><img class="on" src="stk01.webp" alt=""><img src="stk02.webp" alt=""><img src="stk09.webp" alt=""><img src="stk03.webp" alt=""></a>
+<script>(()=>{const im=[...document.querySelectorAll('.buddy img')];let i=0;if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;setInterval(()=>{im[i].classList.remove('on');i=(i+1)%im.length;im[i].classList.add('on')},3200)})();</script>
 </body></html>
