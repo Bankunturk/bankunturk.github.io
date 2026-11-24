@@ -1,0 +1,6 @@
+.welcome.vid{justify-content:center;gap:4px}
+.video-card{position:relative;width:min(100%,900px);aspect-ratio:16/9;border-radius:22px;overflow:hidden;background:#dfe9ee;box-shadow:0 18px 40px rgba(18,70,129,.22)}
+.video-card video{display:block;width:100%;height:100%;object-fit:cover}
+.video-card .sound{position:absolute;right:12px;bottom:12px;padding:8px 14px;border:0;border-radius:30px;background:rgba(255,255,255,.92);color:#124681;font:600 14px/1.2 Prompt,system-ui,sans-serif;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.18)}
+.vid .greeting h1{margin-top:18px}
+@media(max-width:600px){.video-card{border-radius:16px}.vid .greeting h1{font-size:40px}}
