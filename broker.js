@@ -3,6 +3,9 @@ const house=el('house'), unit=el('unit'), msg=el('msg');
 const initial=new URLSearchParams(location.search).get('house');
 if([...house.options].some(o=>o.value===initial))house.value=initial;
 let images=[], description='';
+(()=>{if(document.getElementById('pv'))return;const s=document.createElement('style');s.textContent='#pv{margin:4px 0 6px}#pv .cov{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;display:block;background:#e8eef5}#pv .row{display:flex;gap:6px;overflow-x:auto;padding:8px 0 2px}#pv .row img{flex:0 0 auto;width:72px;height:54px;object-fit:cover;border-radius:8px;border:2px solid transparent;cursor:pointer}#pv .row img.on{border-color:#164e70}#pv a{display:inline-block;margin-top:6px;font-size:15px;color:#164e70}';document.head.appendChild(s);const d=document.createElement('div');d.id='pv';document.getElementById('summary').after(d)})();
+function showPreview(list,file){const d=document.getElementById('pv');if(!list.length){d.innerHTML='';return}const cov=document.createElement('img');cov.className='cov';cov.alt='ภาพตัวอย่างบ้าน';cov.src=list[0];const row=document.createElement('div');row.className='row';list.slice(0,12).forEach((src,i)=>{const t=document.createElement('img');t.src=src;t.alt='';t.loading='lazy';if(!i)t.className='on';t.onclick=()=>{cov.src=src;row.querySelectorAll('img').forEach(x=>x.classList.toggle('on',x===t))};row.appendChild(t)});const a=document.createElement('a');a.href=file;a.target='_blank';a.rel='noopener';a.textContent='ดูหน้าบ้านเต็ม ↗';d.replaceChildren(cov,row,a)}
+
 function reset(){el('result').hidden=true;msg.textContent=''}
 async function load(){
  reset();
@@ -10,7 +13,7 @@ async function load(){
  el('unitLabel').hidden=file!=='house-rk10.html';
  el('unitLabel').style.display=el('unitLabel').hidden?'none':'block';
  el('photos').disabled=el('details').disabled=true;
- el('summary').textContent='กำลังโหลดข้อมูลบ้าน…';el('photos').textContent='ดาวน์โหลดรูปทั้งหมด';
+ el('summary').textContent='กำลังโหลดข้อมูลบ้าน…';document.getElementById('pv').replaceChildren();el('photos').textContent='ดาวน์โหลดรูปทั้งหมด';
  try{
  const response=await fetch(file);if(!response.ok)throw Error();
  const doc=new DOMParser().parseFromString(await response.text(),'text/html');
@@ -20,7 +23,7 @@ async function load(){
  description=[doc.querySelector('h1').textContent,...facts,doc.querySelector('.note')?.textContent].filter(Boolean).join('\n');
  el('summary').textContent=facts.join(' · ')+(file==='house-rk10.html'?' · จอง 160/32–34 · พร้อมขาย 160/35–38':'');
  el('photos').textContent=images.length?'ดาวน์โหลดรูปทั้งหมด ('+images.length+' รูป)':'ยังไม่มีรูปบ้านให้ดาวน์โหลด';
- el('photos').disabled=!images.length;el('details').disabled=false;
+ el('photos').disabled=!images.length;showPreview(images,file);el('details').disabled=false;
  }catch{if(file===house.value)el('summary').textContent='โหลดข้อมูลบ้านไม่ได้ กรุณาลองเปิดหน้านี้อีกครั้ง'}
 }
 function selectedUnit(){return house.value==='house-rk10.html'?unit.value:''}
