@@ -4,3 +4,5 @@
 .video-card .sound{position:absolute;right:12px;bottom:12px;padding:8px 14px;border:0;border-radius:30px;background:rgba(255,255,255,.92);color:#124681;font:600 14px/1.2 Prompt,system-ui,sans-serif;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.18)}
 .vid .greeting h1{margin-top:18px}
 @media(max-width:600px){.video-card{border-radius:16px}.vid .greeting h1{font-size:40px}}
+
+.story-link{margin:14px 0 0;font-size:15px}.story-link a{color:#164e70;text-decoration:underline;text-underline-offset:3px}
